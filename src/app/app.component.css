@@ -1,0 +1,108 @@
+.container {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.card {
+  transform-style: preserve-3d;
+  width: 20rem;
+  height: 40rem;
+
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0px 50px rgba(0, 0, 0, 0.2);
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-title {
+  font-size: 2rem;
+  transition: all 0.75s ease-out;
+}
+.card-text {
+  transition: all 0.75s ease-out;
+}
+.circle {
+  width: 15rem;
+  height: 15rem;
+  background: linear-gradient(
+    to right,
+    RGB(248, 98, 115, 0.75),
+    RGB(2, 2, 2, 0.75)
+  );
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product img {
+  z-index: 2;
+  transition: all 0.75s ease-out;
+}
+
+.color {
+  transition: all 0.75s ease-out;
+}
+.color button {
+  width: 5rem;
+  padding: 0.5rem 0.5rem;
+  background: none;
+  border: none;
+  box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #585858;
+}
+button.active {
+  background: #585858 !important;
+  color: white !important;
+}
+button:focus {
+  outline: none !important;
+}
+.purchase {
+  transition: all 0.75s ease-out;
+}
+.purchase button {
+  width: 100%;
+  padding: 0.5rem 0rem;
+  background: RGB(248, 98, 115);
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.mouse-animate-in {
+  transition: none;
+}
+.mouse-animate-out {
+  transition: all 0.5s ease;
+  transform: rotateY(0deg) rotateX(0deg);
+}
+.popup-effect {
+  transform: translateZ(100px);
+}
+.popup-effect-2 {
+  transition-delay: 0.1s;
+  transform: translateZ(80px);
+}
+.popup-effect-3 {
+  transition-delay: 0.3s;
+  transform: translateZ(60px);
+}
+.popup-rotate-effect {
+  transform: translateZ(100px) rotateZ(40deg) rotateX(-10deg);
+}
