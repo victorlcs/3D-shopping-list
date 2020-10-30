@@ -1,46 +1,17 @@
 <div class="container" appMouseAnimation>
-  <!-- <div class="card">
-    <div class="iphone">
-      <div class="circle"></div>
-      <img src="../assets/iphone12ProMax.png" alt="Iphone12Max">
-    </div>
-    <div class="info">
-      <h1 class="title">Iphone 12 Pro Max</h1>
-      <h3>A14 Bionic rockets past every other smartphone chip. 
-    
-      </h3>
-      <div class="color">
-        <button class="active">Black</button>
-        <button>Blue</button>
-        <button>Red</button>
-        <button>Green</button>
-        <button>White</button>
-      </div>
-      <div class="purchase">
-        <button class="">Purchase</button>
-      </div>
-    </div>
-  </div> -->
-
-
-
   <div class="card">
     <div class="product">
-      <img class="card-img-top" src="../assets/iphone12ProMax.png" alt="Iphone12Max">
+      <img class="card-img-top"  [src]="photoUrl[buttonClicked]" alt="Iphone12Max">
       <div class="circle"></div>
     </div>
-      
-  
     <div class="card-body">
       <h5 class="card-title">Iphone 12 Pro Max</h5>
       <p class="card-text">A14 Bionic rockets past every other smartphone chip. </p>
 
       <div class="color">
-        <button class="active">Black</button>
-        <button class="">Blue</button>
-        <button class="">Red</button>
-        <button class="">Green</button>
-        <button class="">White</button>
+        <ng-container *ngFor="let item of phoneColor">
+          <button [ngClass]="{'active': buttonClicked === item}" (click)="buttonClicked = item">{{item}}</button>
+        </ng-container>
       </div>
       <div class="purchase">
         <button>Purchase</button>
