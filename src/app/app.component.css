@@ -9,7 +9,7 @@
 .card {
   transform-style: preserve-3d;
   width: 20rem;
-  height: 50rem;
+  height: 45rem;
 
   border: none;
   border-radius: 30px;
@@ -28,26 +28,28 @@
   transition: all 0.75s ease-out;
 }
 .circle {
-  width: 15rem;
-  height: 15rem;
-  background: linear-gradient(
+  width: 17rem;
+  height: 17rem;
+  /* background: linear-gradient(
     to right,
     RGB(248, 98, 115, 0.75),
     RGB(2, 2, 2, 0.75)
-  );
+  ); */
   position: absolute;
   border-radius: 50%;
   z-index: 1;
 }
 
 .product {
-  height: 450px;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .product img {
+  height: 300px;
+  width: 250px;
   z-index: 2;
   transition: all 0.75s ease-out;
 }
@@ -56,7 +58,7 @@
   transition: all 0.75s ease-out;
 }
 .color button {
-  width: 5rem;
+  width: 5.5rem;
   padding: 0.5rem 0.5rem;
   background: none;
   border: none;
@@ -105,5 +107,5 @@ button:focus {
   transform: translateZ(60px);
 }
 .popup-rotate-effect {
-  transform: translateZ(100px) rotateZ(40deg) rotateX(-10deg);
+  transform: translateZ(100px) rotateY(-10deg) rotateX(-5deg);
 }

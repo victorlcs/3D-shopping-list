@@ -1,16 +1,16 @@
 <div class="container" appMouseAnimation>
   <div class="card">
     <div class="product">
-      <img class="card-img-top"  [src]="photoUrl[buttonClicked]" alt="Iphone12Max">
-      <div class="circle"></div>
+      <img class="card-img-top"  [src]="photoUrlSelected" alt="Iphone12Max">
+      <div class="circle" [ngStyle]="{'background': 'linear-gradient(to right,'+cicleColor+',RGB(2, 2, 2, 0.75))'}"></div>
     </div>
     <div class="card-body">
       <h5 class="card-title">Iphone 12 Pro Max</h5>
       <p class="card-text">A14 Bionic rockets past every other smartphone chip. </p>
 
       <div class="color">
-        <ng-container *ngFor="let item of phoneColor">
-          <button [ngClass]="{'active': buttonClicked === item}" (click)="buttonClicked = item">{{item}}</button>
+        <ng-container *ngFor="let item of product">
+          <button [ngClass]="{'active': buttonClicked === item.color}" (click)="onButtonClick(item)">{{item.color}}</button>
         </ng-container>
       </div>
       <div class="purchase">
